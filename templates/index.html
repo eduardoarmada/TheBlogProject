@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <title>MyBlog</title>
+</head>
+<body>
+    <h1>Blog's Posts</h1>
+    <a href="/add" class="centered_link">Add a post</a>
+    {% for post in posts %}
+        <p>{{post["id"]}}</p>
+        <p>{{post["author"]}}</p>
+        <p>{{post["title"]}}</p>
+        <p>{{post["content"]}}</p>
+        <a href="/delete/{{post['id']}}" target="_parent"><button>Click me to delete the post {{post['id']}}!</button></a>
+        <a href="/update/{{post['id']}}" target="_parent"><button>Click me to update the post {{post['id']}}!</button></a>
+    {% endfor %}
+</body>
+</html>

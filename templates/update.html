@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update page</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <h1>Update the post!</h1>
+    <form action="/update/{{id_number}}" method="POST">
+        <label for="title">New title for your post</label>
+        <input type="text" id="title" name="title">
+        <label for="content">New content for your post</label>
+        <input type="text" id="content" name="content">
+        <input type="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Delete page</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <h1>Delete the post!</h1>
+        <form action="/delete/{{id_number}}" method="POST">
+            <p>Are you sure you want to delete the post with id {{id_number}}?</p>
+            <input type="submit" value="Press to delete">
+        </form>
+    </body>
+</html>
